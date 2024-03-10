@@ -16,7 +16,6 @@ on:
 
 env:
   PROJECT_ID: ${{ secrets.GKE_PROJECT }}
-  GAR_LOCATION: europe-west2
   GKE_CLUSTER: automatic-succotash
   GKE_ZONE: europe-west2-a
   DEPLOYMENT_NAME: gke-test
@@ -45,7 +44,7 @@ jobs:
 
     - name: Docker configuration
       run: |-
-        echo ${{steps.auth.outputs.access_token}} | docker login -u oauth2accesstoken --password-stdin https://$GAR_LOCATION-docker.pkg.dev
+        gcloud auth configure-docker
 
     # Configure Docker to use the gcloud command-line tool as a credential
     # helper for authentication
