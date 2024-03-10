@@ -16,6 +16,7 @@ on:
 
 env:
   PROJECT_ID: ${{ secrets.GKE_PROJECT }}
+  GAR_LOCATION: europe-west2
   GKE_CLUSTER: automatic-succotash
   GKE_ZONE: europe-west2-a
   DEPLOYMENT_NAME: gke-test
