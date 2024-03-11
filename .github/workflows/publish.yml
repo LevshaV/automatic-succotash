@@ -45,7 +45,7 @@ jobs:
 
     - name: Docker configuration
       run: |-
-        gcloud auth configure-docker
+        gcloud auth configure-docker ${GKE_REGION}-docker.pkg.dev
 
     # Configure Docker to use the gcloud command-line tool as a credential
     # helper for authentication
