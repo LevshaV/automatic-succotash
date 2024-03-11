@@ -76,7 +76,7 @@ jobs:
 
     - name: Deploy to Cloud Run
       id: deploy
-      uses: google-github-actions/deploy-cloudrun@latest
+      uses: google-github-actions/deploy-cloudrun@v2
       with:
         service: ${{ env.IMAGE }}
         region: ${{ env.GKE_REGION }}
